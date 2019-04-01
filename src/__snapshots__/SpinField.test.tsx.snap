@@ -1,0 +1,162 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SpinField should render correctly 1`] = `
+<div
+  className="css-1xtwub4"
+  tabIndex={-1}
+>
+  <div
+    className="css-zfgq3b"
+  >
+    <button
+      className="css-1hsikf1"
+      disabled={true}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchCancel={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={-1}
+    >
+      -
+    </button>
+    <div
+      className="css-1fmi4pn"
+    >
+      <input
+        className="css-1ido6u3"
+        disabled={true}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        tabIndex={0}
+        value="1"
+      />
+    </div>
+    <button
+      className="css-1hsikf1"
+      disabled={true}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchCancel={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={-1}
+    >
+      +
+    </button>
+  </div>
+</div>
+`;
+
+exports[`SpinField should render correctly 2`] = `
+<div
+  className="css-1xtwub4"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  tabIndex={-1}
+>
+  <div
+    className="css-1ri5oq"
+  >
+    <button
+      className="css-1hsikf1"
+      disabled={false}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchCancel={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={-1}
+    >
+      -
+    </button>
+    <div
+      className="css-1fmi4pn"
+    >
+      <input
+        className="css-1ido6u3"
+        disabled={false}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        tabIndex={0}
+        value="1"
+      />
+    </div>
+    <button
+      className="css-1hsikf1"
+      disabled={false}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchCancel={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={-1}
+    >
+      +
+    </button>
+  </div>
+</div>
+`;
+
+exports[`SpinField should render correctly 3`] = `
+<div
+  className="css-1xtwub4"
+  tabIndex={-1}
+>
+  <div
+    className="css-zfgq3b"
+  >
+    <button
+      className="css-1hsikf1"
+      disabled={true}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchCancel={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={-1}
+    >
+      -
+    </button>
+    <div
+      className="css-1fmi4pn"
+    >
+      <input
+        className="css-yzm1cj"
+        disabled={true}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        tabIndex={0}
+        value="1"
+      />
+    </div>
+    <button
+      className="css-1hsikf1"
+      disabled={true}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchCancel={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={-1}
+    >
+      +
+    </button>
+  </div>
+</div>
+`;

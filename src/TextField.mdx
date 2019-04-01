@@ -1,0 +1,85 @@
+---
+menu: Controls
+name: Text Field
+---
+
+import { Playground, PropsTable } from 'docz'
+
+# Text Field
+
+## Installation
+
+```jsx
+import { TextField, SignalingLevel, TextAlign, CommitType } from 'oe-library';  
+```
+
+## When to Use
+
+The Textfield is a UI Component for displaying and editing textual information. In addition to alphanumeric characters, the input must also allow the input of powers and fractions, etc.
+
+The Textfield is available in two different versions:
+
+* Read-Only Textfield
+* Editable Textfield
+
+A Textfield can be combined with a Label. It can be surrounded with an Alarm
+Border or a Focus Border. If the control is focused, the Focus Border is added
+to the dimension of the control.
+
+## Examples
+
+import { default as TextField, _TextField, TextAlign } from './TextField'
+import { SignalingLevel, CommitType } from './types'
+
+<Playground>
+  <TextField
+    value={'Text'}
+    commit={CommitType.OnEnter}
+    onChange={value => alert(value)}/>
+</Playground>
+
+### With old value
+
+<Playground>
+  <TextField value={2.125} oldValue={1.125} textAlign={TextAlign.End}/>
+</Playground>
+
+### With alarm
+
+<Playground>
+  <TextField
+    value={'Alarm'}
+    level={SignalingLevel.Alarm}/>
+</Playground>
+
+### With warning
+
+<Playground>
+  <TextField
+    value={'Warning'}
+    level={SignalingLevel.Warning}/>
+</Playground>
+
+### With icon
+
+<Playground>
+  <TextField
+    value={'Icon'}
+    icon={(<svg viewBox="0 0 8 8"><path d="M0,0 L8,0 L8,8 L0,8 Z" /></svg>)}/>
+</Playground>
+
+### Password
+
+<Playground>
+  <TextField
+    value={'Secret'}
+    password={true}/>
+</Playground>
+
+## Props
+
+<PropsTable of={_TextField} />
+
+## Further Reading
+
+* [Styleguide](http://poc-life-demo.oerlikontextile.com/styleguide/index.html#/UI%20Components/Textfield)

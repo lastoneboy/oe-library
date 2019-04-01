@@ -1,0 +1,1085 @@
+html {
+  /*
+    Define base size unit:
+      1 SP = 2.5mm
+    Within the application, this can be used with `rem` units, e.g.:
+      5rem = 5 SP = 12,5mm
+  */
+  font-size: 2.5mm;
+}
+
+:root {
+  /**
+     * Physikalische Farben
+     */
+
+  /* Signalfarben/Statusfarben */
+  --OMF_Red_00: #eb0000;
+  --OMF_Red_01: #d70a14;
+  --OMF_Red_01__30: rgba(215, 10, 20, 0.3);
+  --OMF_Red_02: #b71234;
+  --OMF_Red_03: #fc9096;
+  --OMF_Purple_00: #944fd4;
+  --OMF_Purple_00__30: rgba(148, 79, 212, 0.3);
+  --OMF_Purple_00__50: rgba(148, 79, 212, 0.5);
+  --OMF_Purple_01: #d3b4f1;
+  --OMF_Purple_01__30: rgba(211, 180, 241, 0.3);
+  --OMF_Blue_00: #2a5cff;
+  --OMF_Blue_01: #416eff;
+  --OMF_Blue_01__50: rgba(65, 110, 255, 0.5);
+  --OMF_Blue_02: #d1e0ff;
+  --OMF_Blue_03: #27bed9;
+  --OMF_Blue_03__30: rgba(39, 190, 217, 0.3);
+  --OMF_Blue_03__50: rgba(39, 190, 217, 0.5);
+  --OMF_Blue_04: #b8ecf5;
+  --OMF_Green_00: #00c968;
+  --OMF_Green_01: #77b316;
+  --OMF_Green_01__30: rgba(119, 179, 22, 0.3);
+  --OMF_Green_01__50: rgba(119, 179, 22, 0.5);
+  --OMF_Green_02: #c1d4a1;
+  --OMF_Brown_00: #9c5d1a;
+  --OMF_Brown_00__30: rgba(156, 93, 26, 0.3);
+  --OMF_Brown_00__50: rgba(156, 93, 26, 0.5);
+  --OMF_Brown_01: #c1ab93;
+  --OMF_Yellow_00: #faaa20;
+  --OMF_Yellow_00__30: rgba(250, 170, 32, 0.3);
+  --OMF_Yellow_01: #d38d21;
+  --OMF_Yellow_02: #ffdda2;
+
+  /* Standardfarben */
+  --OMF_Blue_05: #0080ff;
+  --OMF_Blue_05__30: rgba(0, 128, 255, 0.3);
+  --OMF_Blue_06: #317bbf;
+  --OMF_Blue_07: #368ad9;
+  --OMF_Blue_07__50: rgba(54, 138, 217, 0.5);
+  --OMF_Blue_08: #00aaff;
+  --OMF_Blue_09: #9bc6ef;
+  --OMF_Blue_10: #c2dbf2;
+  --OMF_Blue_11: #d9ecff;
+  --OMF_Blue_11__75: rgba(217, 236, 255, 0.75);
+  --OMF_Blue_12: #f1f4fc;
+  --OMF_Blue_12__00: rgba(241, 244, 252, 0);
+  --OMF_Blue_13: #e9f3fe;
+  --OMF_Blue-grey_00: #385674;
+  --OMF_Blue-grey_00__30: rgba(56, 86, 116, 0.3);
+  --OMF_Blue-grey_01: #3f6081;
+  --OMF_Blue-grey_02: #46698c;
+  --OMF_Blue-grey_03: #546d84;
+  --OMF_Blue-grey_04: #5684b3;
+  --OMF_Blue-grey_05: #6b8fb3;
+  --OMF_Blue-grey_05__50: rgba(107, 143, 179, 0.5);
+  --OMF_Blue-grey_06: #778fa6;
+  --OMF_Blue-grey_07: #8497aa;
+  --OMF_Dark-blue_00: #071c31;
+  --OMF_Dark-blue_00__50: rgba(7, 28, 49, 0.5);
+  --OMF_Dark-blue_00__60: rgba(7, 28, 49, 0.6);
+  --OMF_Grey_00: #1e3245;
+  --OMF_Grey_01: #344354;
+  --OMF_Grey_02: #525a69;
+  --OMF_Grey_03: #73808f;
+  --OMF_Grey_03__35: rgba(115, 128, 143, 0.35);
+  --OMF_Grey_04: #9ea9b3;
+  --OMF_Grey_05: #b0b0b0;
+  --OMF_Grey_06: #b7bdc2;
+  --OMF_Grey_07: #bec6d3;
+  --OMF_Grey_07__60: rgba(190, 198, 211, 0.6);
+  --OMF_Grey_08: #cdd5e4;
+  --OMF_Grey_08__70: rgba(205, 213, 228, 0.7);
+  --OMF_Grey_09: #dce2ed;
+  --OMF_Grey_09__60: rgba(220, 226, 237, 0.6);
+  --OMF_Grey_09__65: rgba(220, 226, 237, 0.65);
+  --OMF_Grey_10: #e3eaf9;
+  --OMF_Grey_10__70: rgba(227, 234, 249, 0.7);
+  --OMF_Grey_11: #e7e9ee;
+  --OMF_Grey_12: #e6e6e6;
+  --OMF_White_00: #ffffff;
+  --OMF_White_00__40: rgba(255, 255, 255, 0.4);
+  --OMF_White_00__50: rgba(255, 255, 255, 0.5);
+}
+
+.dark {
+  /* Hintergrundfläche */
+  --OMF_Application-Background_std: #036;
+
+  /* Schriftfarbe */
+  --OMF_Button_Text_ena: #fff;
+}
+
+html,
+.light {
+  /* MANUAL: Hintergrundfarbe in der Maschinenübersicht (bzw. Applikations-Hintergrund) */
+  --OMF_Application-Background_std: var(--OMF_White_00);
+
+  /* WARNING generated {
+
+    /* Farbe der Alarm-Border für UI Komponenten */
+  --OMF_Border_Alarm: var(--OMF_Red_02);
+
+  /* Farbe der Fokus-Border für UI Komponenten */
+  --OMF_Border_Focus: var(--OMF_Blue_05);
+
+  /* Farbe der Alarm-Border für UI Komponenten */
+  --OMF_Border_Warning: var(--OMF_Yellow_00);
+
+  /* Hintergrundfläche des Oerlikon Logos im Frame - Active */
+  --OMF_Brandinglogo_Background_actena: var(--OMF_Red_00);
+
+  /* Hintergrundfläche des Oerlikon Logos im Frame - Enabled */
+  --OMF_Brandinglogo_Background_ena: var(--OMF_White_00);
+
+  /* Hintergrundfläche des Oerlikon Logos im Frame - Pressed */
+  --OMF_Brandinglogo_Background_prs: var(--OMF_Grey_12);
+
+  /* Text-/Logofarbe des Oerlikon Logos im Frame - Active */
+  --OMF_Brandinglogo_Text_actena: var(--OMF_White_00);
+
+  /* Text-/Logofarbe des Oerlikon Logos im Frame - Enabled */
+  --OMF_Brandinglogo_Text_ena: var(--OMF_Red_00);
+
+  /* Text-/Logofarbe des Oerlikon Logos im Frame - Pressed */
+  --OMF_Brandinglogo_Text_prs: var(--OMF_Red_00);
+
+  /* Stützpunkt 00 Verlaufsfarbe für Standard Button Komponenten - Enabled */
+  --OMF_Button_Gradient_00_ena: var(--OMF_Blue_10);
+
+  /* Stützpunkt 01 Verlaufsfarbe für Standard Button Komponenten - Enabled */
+  --OMF_Button_Gradient_01_ena: var(--OMF_Blue_09);
+
+  /* Stützpunkt 00 Verlaufsfarbe für Standard Button Komponenten - Pressed */
+  --OMF_Button_Gradient_00_prs: var(--OMF_Blue_09);
+
+  /* Stützpunkt 01 Verlaufsfarbe für Standard Button Komponenten - Pressed */
+  --OMF_Button_Gradient_01_prs: var(--OMF_Blue_10);
+
+  /* Stützpunkt 00 Verlaufsfarbe für Standard Button Komponenten - Disabled (75% opacity) */
+  --OMF_Button_Gradient_00_dis: var(--OMF_Blue_11__75);
+
+  /* Stützpunkt 01 Verlaufsfarbe für Standard Button Komponenten - Disabled (75% opacity) */
+  --OMF_Button_Gradient_01_dis: var(--OMF_Blue_11__75);
+
+  /* Schattenfarbe für Standard Button Komponenten - Enabled */
+  --OMF_Button_Shadow_ena: var(--OMF_Blue-grey_05);
+
+  /* Schattenfarbe für Standard Button Komponenten - Pressed */
+  --OMF_Button_Shadow_prs: var(--OMF_Blue-grey_05);
+
+  /* Schattenfarbe für Standard Button Komponenten - Disabled (75% opacity) */
+  --OMF_Button_Shadow_dis: var(--OMF_Blue_11__75);
+
+  /* Textfarbe für Standard Button Komponenten - Disabled (50% opacity) */
+  --OMF_Button_Text_dis: var(--OMF_Dark-blue_00__50);
+
+  /* Textfarbe für Standard Button Komponenten - Enabled */
+  --OMF_Button_Text_ena: var(--OMF_Dark-blue_00);
+
+  /* Textfarbe für Standard Button Komponenten - Pressed */
+  --OMF_Button_Text_prs: var(--OMF_Dark-blue_00);
+
+  /* Iconfarbe für Standard Button Komponenten - Activ Enabled */
+  --OMF_Button_Icon_actena: var(--OMF_Blue_07);
+
+  /* Iconfarbe für Standard Button Komponenten - Disabled (50% opacity) */
+  --OMF_Button_Icon_dis: var(--OMF_Dark-blue_00__50);
+
+  /* Iconfarbe für Standard Button Komponenten - Enabled */
+  --OMF_Button_Icon_ena: var(--OMF_Dark-blue_00);
+
+  /* Iconfarbe für Standard Button Komponenten - Pressed */
+  --OMF_Button_Icon_prs: var(--OMF_Dark-blue_00);
+
+  /* Hintergrundfarbe der Button Row */
+  --OMF_Button-Row_Background_std: var(--OMF_Blue-grey_02);
+
+  /* Iconfarbe in der Button Row */
+  --OMF_Button-Row_Icon_std: var(--OMF_White_00);
+
+  /* Textfarbe in der Button Row */
+  --OMF_Button-Row_Text_std: var(--OMF_White_00);
+
+  /* Hintergrundfarbe der Modusumschaltung in der Buttonrow */
+  --OMF_Button-Row_Mode_Background_ena: var(--OMF_Blue-grey_02);
+
+  /* Textfarbe der Modusumschaltung in der Buttonrow */
+  --OMF_Button-Row_Mode_Text_ena: var(--OMF_Grey_07);
+
+  /* Iconfarbe der Modusumschaltung in der Buttonrow – Enabled */
+  --OMF_Button-Row_Mode_Icon_ena: var(--OMF_Grey_07);
+
+  /* Hintergrundfarbe der Modusumschaltung in der Buttonrow – Active */
+  --OMF_Button-Row_Mode_Background_act: var(--OMF_Blue-grey_06);
+
+  /* Textfarbe der Modusumschaltung in der Buttonrow – Active */
+  --OMF_Button-Row_Mode_Text_act: var(--OMF_White_00);
+
+  /* Iconfarbe der Modusumschaltung in der Buttonrow – Active */
+  --OMF_Button-Row_Mode_Icon_act: var(--OMF_White_00);
+
+  /* Hintergundfarbe der Modusumschaltung in der Buttonrow – Pressed */
+  --OMF_Button-Row_Mode_Background_prs: var(--OMF_Dark-blue_00);
+
+  /* Textfarbe der Modusumschaltung in der Buttonrow – Pressed */
+  --OMF_Button-Row_Mode_Text_prs: var(--OMF_Blue-grey_05);
+
+  /* Iconfarbe der Modusumschaltung in der Buttonrow – Pressed */
+  --OMF_Button-Row_Mode_Icon_prs: var(--OMF_Blue-grey_05);
+
+  /* Iconfarbe für das Öffnen der gesamten Contextnavigation - Enabled */
+  --OMF_Context-Navigation_Button-Icon_ena: var(--OMF_Grey_07);
+
+  /* Iconfarbe für das Öffnen der gesamten Contextnavigation - Pressed */
+  --OMF_Context-Navigation_Button-Icon_prs: var(--OMF_Blue-grey_05);
+
+  /* Iconfarbe für das Öffnen der gesamten Contextnavigation - Alarm Enabled */
+  --OMF_Context-Navigation_Button-Icon_Alarm_ena: var(--OMF_Red_01);
+
+  /* Iconfarbe für das Öffnen der gesamten Contextnavigation - Alarm Pressed */
+  --OMF_Context-Navigation_Button-Icon_Alarm_prs: var(--OMF_Red_02);
+
+  /* Iconfarbe für das Öffnen der gesamten Contextnavigation - Warning Enabled */
+  --OMF_Context-Navigation_Button-Icon_Warning_ena: var(--OMF_Yellow_00);
+
+  /* Iconfarbe für das Öffnen der gesamten Contextnavigation - Warning Pressed */
+  --OMF_Context-Navigation_Button-Icon_Warning_prs: var(--OMF_Yellow_01);
+
+  /* Hintergrundfarbe die Kontextnavigation */
+  --OMF_Context-Navigation-Background_std: var(--OMF_Grey_07);
+
+  /* Hintergrundfarbe für den Thumb der Contextnavigation - Active Enabled */
+  --OMF_Context-Navigation-Thumb_actena: var(--OMF_Grey_10);
+
+  /* Hintergrundfarbe für den Thumb der Contextnavigation - Enabled */
+  --OMF_Context-Navigation-Thumb_ena: var(--OMF_White_00);
+
+  /* Schattenfarbe für den Thumb der Contextnavigation - Active Enabled */
+  --OMF_Context-Navigation-Thumb_Shadow_actena: var(--OMF_Dark-blue_00);
+
+  /* Schattenfarbe für den Thumb der Contextnavigation - Active Enabled */
+  --OMF_Context-Navigation-Thumb_Shadow_ena: var(--OMF_Dark-blue_00);
+
+  /* Textfarbe für den Thumb der Contextnavigation - Active Enabled */
+  --OMF_Context-Navigation-Thumb_Text_actena: var(--OMF_Dark-blue_00);
+
+  /* Textfarbe für den Thumb der Contextnavigation - Active Enabled */
+  --OMF_Context-Navigation-Thumb_Text_ena: var(--OMF_Dark-blue_00);
+
+  /* Hintergrundfarbe eines Dialogs */
+  --OMF_Dialog_Background: var(--OMF_Blue-grey_02);
+
+  /* Konturfarbefarbe eines Dialogs */
+  --OMF_Dialog-Border_std: var(--OMF_Blue-grey_06);
+
+  /* Farbe der Fläche zum abdimmen hinter modalen Dialogen (65% opacity) */
+  --OMF_Dialog_Modal: var(--OMF_Grey_09__65);
+
+  /* Schattenfarbe für Dialoge (50% opacity) */
+  --OMF_Dialog_Shadow: var(--OMF_Dark-blue_00__50);
+
+  /* Farbe des Separators im Dialog */
+  --OMF_Dialog_Separator: var(--OMF_White_00);
+
+  /* Textfarbe im Dialog */
+  --OMF_Dialog_Text: var(--OMF_White_00);
+
+  /* Iconfarbe im Header des Dialogs */
+  --OMF_Dialog_Icon: var(--OMF_White_00);
+
+  /* Konturfarbe des Dropdown */
+  --OMF_Dropdown_Border: var(--OMF_Blue_10);
+
+  /* Hintergrundfarbe gerader Einträge im Dropdown  */
+  --OMF_Dropdown-Entry_Row-Even: var(--OMF_Blue_13);
+
+  /* Hintergrundfarbe ungerader Einträge im Dropdown  */
+  --OMF_Dropdown-Entry_Row-Odd: var(--OMF_Blue_12);
+
+  /* Selektionsfarbe für Einträge im Dropdown  */
+  --OMF_Dropdown-Entry_Selected: var(--OMF_Blue_10);
+
+  /* Iconfarbe für Einträge im Dropdown - Enabled */
+  --OMF_Dropdown-Entry_Icon_ena: var(--OMF_Dark-blue_00);
+
+  /* Iconfarbe für Einträge im Dropdown mit Selektion */
+  --OMF_Dropdown-Entry_Icon_Selected: var(--OMF_Dark-blue_00);
+
+  /* Textfarbe für Einträge im Dropdown - Enabled */
+  --OMF_Dropdown-Entry_Text_ena: var(--OMF_Dark-blue_00);
+
+  /* Textfarbe für Einträge im Dropdown mit Selektion */
+  --OMF_Dropdown-Entry_Text_Selected: var(--OMF_Dark-blue_00);
+
+  /* Farbe für die Darstellung von aktuellen elektrischen Fehlern - Disabled (50% opacity) */
+  --OMF_Fault-Electrical_Actual_dis: var(--OMF_Green_01__50);
+
+  /* Farbe für die Darstellung von aktuellen elektrischen Fehlern - Enabled */
+  --OMF_Fault-Electrical_Actual_ena: var(--OMF_Green_01);
+
+  /* Farbe für die Darstellung von aktuellen elektrischen Fehlern - Pressed */
+  --OMF_Fault-Electrical_Actual_prs: var(--OMF_Green_01);
+
+  /* Farbe für die Darstellung von aktuellen Mechanik Fehlern - Disabled (50% opacity) */
+  --OMF_Fault-Mechanical_Actual_dis: var(--OMF_Purple_00__50);
+
+  /* Farbe für die Darstellung von aktuellen Mechanik Fehlern - Enabled */
+  --OMF_Fault-Mechanical_Actual_ena: var(--OMF_Purple_00);
+
+  /* Farbe für die Darstellung von aktuellen Mechanik Fehlern - Pressed */
+  --OMF_Fault-Mechanical_Actual_prs: var(--OMF_Purple_00);
+
+  /* Farbe für die Darstellung von aktuellen Bediener Fehlern - Disabed (50% opacity) */
+  --OMF_Fault-Operation_Actual_dis: var(--OMF_Brown_00__50);
+
+  /* Farbe für die Darstellung von aktuellen Bediener Fehlern - Enabled */
+  --OMF_Fault-Operation_Actual_ena: var(--OMF_Brown_00);
+
+  /* Farbe für die Darstellung von aktuellen Bediener Fehlern - Pressed */
+  --OMF_Fault-Operation_Actual_prs: var(--OMF_Brown_00);
+
+  /* Farbe für die Darstellung von aktuellen Prozess Fehlern - Disabled (50% opacity) */
+  --OMF_Fault-Process_Actual_dis: var(--OMF_Blue_03__50);
+
+  /* Farbe für die Darstellung von aktuellen Prozess Fehlern - Enabled */
+  --OMF_Fault-Process_Actual_ena: var(--OMF_Blue_03);
+
+  /* Farbe für die Darstellung von aktuellen Prozess Fehlern - Pressed */
+  --OMF_Fault-Process_Actual_prs: var(--OMF_Blue_03);
+
+  /* Farbe für die Darstellung von aktuellen System Fehlern - Disabled (50% opacity) */
+  --OMF_Fault-System_Actual_dis: var(--OMF_Blue_01__50);
+
+  /* Farbe für die Darstellung von aktuellen System Fehlern - Enabled */
+  --OMF_Fault-System_Actual_ena: var(--OMF_Blue_01);
+
+  /* Farbe für die Darstellung von aktuellen System Fehlern - Pressed */
+  --OMF_Fault-System_Actual_prs: var(--OMF_Blue_01);
+
+  /* Iconfarbe für Filter und Tools im Title von Screens - Active Disabled (50% opacity) */
+  --OMF_Filter-Tools_Icon_actdis: var(--OMF_Blue_07__50);
+
+  /* Iconfarbe für Filter und Tools im Title von Screens - Active Enabled */
+  --OMF_Filter-Tools_Icon_actena: var(--OMF_Blue_07);
+
+  /* Iconfarbe für Filter und Tools im Title von Screens - Active Pressed */
+  --OMF_Filter-Tools_Icon_actprs: var(--OMF_Blue_07);
+
+  /* Iconfarbe für Filter und Tools im Title von Screens - Disabled (50% opacity) */
+  --OMF_Filter-Tools_Icon_dis: var(--OMF_Dark-blue_00__50);
+
+  /* Iconfarbe für Filter und Tools im Title von Screens - Enabled */
+  --OMF_Filter-Tools_Icon_ena: var(--OMF_Dark-blue_00);
+
+  /* Iconfarbe für Filter und Tools im Title von Screens - Pressed */
+  --OMF_Filter-Tools_Icon_prs: var(--OMF_Dark-blue_00);
+
+  /* Farbe für die Darstellung von aktuellen System Fehlern - Disabled (50% opacity) */
+  --OMF_Global-Alarm_Text_dis: var(--OMF_White_00__50);
+
+  /* Farbe für die Darstellung von aktuellen System Fehlern - Enabled */
+  --OMF_Global-Alarm_Text_ena: var(--OMF_White_00);
+
+  /* Farbe für die Darstellung von aktuellen System Fehlern - Pressed */
+  --OMF_Global-Alarm_Text_prs: var(--OMF_White_00);
+
+  /* Flächenfarbe des Graphen (30% opacity) */
+  --OMF_Graph_Area_00: var(--OMF_Blue_03__30);
+
+  /* Flächenfarbe des Graphen (30% opacity) */
+  --OMF_Graph_Area_01: var(--OMF_Green_01__30);
+
+  /* Flächenfarbe des Graphen (30% opacity) */
+  --OMF_Graph_Area_02: var(--OMF_Purple_00__30);
+
+  /* Flächenfarbe des Graphen (30% opacity) */
+  --OMF_Graph_Area_03: var(--OMF_Yellow_00__30);
+
+  /* Flächenfarbe des Graphen (30% opacity) */
+  --OMF_Graph_Area_04: var(--OMF_Red_01__30);
+
+  /* Flächenfarbe des Graphen (30% opacity) */
+  --OMF_Graph_Area_05: var(--OMF_Blue-grey_00__30);
+
+  /* Flächenfarbe des Graphen (30% opacity) */
+  --OMF_Graph_Area_06: var(--OMF_Brown_00__30);
+
+  /* Flächenfarbe des Graphen (30% opacity) */
+  --OMF_Graph_Area_07: var(--OMF_Purple_01__30);
+
+  /* Flächenfarbe des Graphen (30% opacity) */
+  --OMF_Graph_Area_08: var(--OMF_Blue_05__30);
+
+  /* Erste Alternierungsfarbe der Inhaltsfläche (Alternierung startet von unten) (40% opacity) */
+  --OMF_Graph_Background_Alternate_00: var(--OMF_White_00__40);
+
+  /* Zweite Alternierungsfarbe der Inhaltsfläche (Alternierung startet von unten) */
+  --OMF_Graph_Background_Alternate_01: var(--OMF_Blue_12);
+
+  /* Kurvenfarbe des Graphen */
+  --OMF_Graph_Curve_00: var(--OMF_Blue_03);
+
+  /* Kurvenfarbe des Graphen */
+  --OMF_Graph_Curve_01: var(--OMF_Green_01);
+
+  /* Kurvenfarbe des Graphen */
+  --OMF_Graph_Curve_02: var(--OMF_Purple_00);
+
+  /* Kurvenfarbe des Graphen */
+  --OMF_Graph_Curve_03: var(--OMF_Yellow_00);
+
+  /* Kurvenfarbe des Graphen */
+  --OMF_Graph_Curve_04: var(--OMF_Red_01);
+
+  /* Kurvenfarbe des Graphen */
+  --OMF_Graph_Curve_05: var(--OMF_Blue-grey_00);
+
+  /* Kurvenfarbe des Graphen */
+  --OMF_Graph_Curve_06: var(--OMF_Brown_00);
+
+  /* Kurvenfarbe des Graphen */
+  --OMF_Graph_Curve_07: var(--OMF_Purple_01);
+
+  /* Kurvenfarbe des Graphen */
+  --OMF_Graph_Curve_08: var(--OMF_Blue_05);
+
+  /* Farbe der Flächen des Bardiagrammes für den Graphen */
+  --OMF_Graph_Bar-Chart_00: var(--OMF_Blue_03);
+
+  /* Farbe der Flächen des Bardiagrammes für den Graphen */
+  --OMF_Graph_Bar-Chart_01: var(--OMF_Green_01);
+
+  /* Farbe der Flächen des Bardiagrammes für den Graphen */
+  --OMF_Graph_Bar-Chart_02: var(--OMF_Purple_00);
+
+  /* Farbe der Flächen des Bardiagrammes für den Graphen */
+  --OMF_Graph_Bar-Chart_03: var(--OMF_Yellow_00);
+
+  /* Farbe der Flächen des Bardiagrammes für den Graphen */
+  --OMF_Graph_Bar-Chart_04: var(--OMF_Red_01);
+
+  /* Farbe der Flächen des Bardiagrammes für den Graphen */
+  --OMF_Graph_Bar-Chart_05: var(--OMF_Blue-grey_00);
+
+  /* Farbe der Flächen des Bardiagrammes für den Graphen */
+  --OMF_Graph_Bar-Chart_06: var(--OMF_Brown_00);
+
+  /* Farbe der Flächen des Bardiagrammes für den Graphen */
+  --OMF_Graph_Bar-Chart_07: var(--OMF_Purple_01);
+
+  /* Farbe der Flächen des Bardiagrammes für den Graphen */
+  --OMF_Graph_Bar-Chart_08: var(--OMF_Blue_05);
+
+  /* Outlinefarbe der Kurven im Grap */
+  --OMF_Graph_Curve_Outline_00: var(--OMF_White_00);
+
+  /* Farbe des Start-Handle - Default */
+  --OMF_Graph_End-Handle_def: var(--OMF_Blue-grey_03);
+
+  /* Outlinefarbe des End Handles - Default */
+  --OMF_Graph_End-Handle_Outline_def: var(--OMF_Blue_12);
+
+  /* Farbe des End Rulers - Default */
+  --OMF_Graph_End-Ruler_def: var(--OMF_Blue-grey_03);
+
+  /* Farbe des Handles - Default */
+  --OMF_Graph_Handle_def: var(--OMF_Blue_08);
+
+  /* Outlinefarbe des Handles - Default */
+  --OMF_Graph_Handle_Outline_def: var(--OMF_Blue_12);
+
+  /* Farbe des Rulers - Default */
+  --OMF_Graph_Ruler_def: var(--OMF_Blue_08);
+
+  /* Farbe des Start Rulers - Default */
+  --OMF_Graph_Start-Ruler_def: var(--OMF_Blue-grey_03);
+
+  /* Farbe des Start Handels - Default */
+  --OMF_Graph_Start-Handle_def: var(--OMF_Blue-grey_03);
+
+  /* Outlinefarbe des Start Handles - Default */
+  --OMF_Graph_Start-Handle_Outline_def: var(--OMF_Blue_12);
+
+  /* Hintergrundfarbe der X-Achse */
+  --OMF_Graph_X-Scale_Background_def: var(--OMF_Blue_12);
+
+  /* Farbe der Spaltentrennung im Inhaltsbereich und auf der X-Achse */
+  --OMF_Graph_X-Scale_Separation_01: var(--OMF_Grey_08);
+
+  /* Schriftfarbe der X-Achse - Default */
+  --OMF_Graph_X-Scale_Text: var(--OMF_Dark-blue_00);
+
+  /* Hintergrundfarbe der Y-Achse Alternierung 00 (40% opacity) */
+  --OMF_Graph_Y-Scale_Background_Alternate_00: var(--OMF_White_00__40);
+
+  /* Hintergrundfarbe der Y-Achse Alternierung 01 */
+  --OMF_Graph_Y-Scale_Background_Alternate_01: var(--OMF_Blue_12);
+
+  /* Schriftfarbe der Y-Achse */
+  --OMF_Graph_Y-Scale_Text: var(--OMF_Dark-blue_00);
+
+  /* Füllfarbe für den Limitbereich Alarm (30% opacity) */
+  --OMF_Graph_Limit_Alarm: var(--OMF_Red_01__30);
+
+  /* Füllfarbe für den Limitbereich Warning (30% opacity) */
+  --OMF_Graph_Limit_Warning: var(--OMF_Yellow_00__30);
+
+  /* Stützpunkt 00 Verlaufsfarbe für Interest-Menue - Enabled */
+  --OMF_Interest-Menu_Gradient_00_ena: var(--OMF_Blue-grey_00);
+
+  /* Stützpunkt 01 Verlaufsfarbe für Interest-Menue - Enabled */
+  --OMF_Interest-Menu_Gradient_01_ena: var(--OMF_Blue-grey_01);
+
+  /* Stützpunkt 00 Verlaufsfarbe für Interest-Menue - Pressed */
+  --OMF_Interest-Menu_Gradient_00_prs: var(--OMF_Blue-grey_01);
+
+  /* Stützpunkt 01 Verlaufsfarbe für Interest-Menue - Pressed */
+  --OMF_Interest-Menu_Gradient_01_prs: var(--OMF_Blue-grey_00);
+
+  /* Iconfarbe für Interest-Menue - Enabled */
+  --OMF_Interest-Menu_Icon_ena: var(--OMF_White_00);
+
+  /* Iconfarbe für Interest-Menue - Pressed */
+  --OMF_Interest-Menu_Icon_prs: var(--OMF_White_00);
+
+  /* Farbe für Textlabel - Disabled (50% opacity) */
+  --OMF_Label_dis: var(--OMF_Dark-blue_00__50);
+
+  /* Farbe für Textlabel - Enabled */
+  --OMF_Label_ena: var(--OMF_Dark-blue_00);
+
+  /* Farbe für das Icon eines Links - Disabled (50% opacity) */
+  --OMF_Link_Icon_dis: var(--OMF_Dark-blue_00__50);
+
+  /* Farbe für das Icon eines Links - Enabled */
+  --OMF_Link_Icon_ena: var(--OMF_Dark-blue_00);
+
+  /* Farbe für das Icon eines Links - Pressed */
+  --OMF_Link_Icon_prs: var(--OMF_Dark-blue_00);
+
+  /* Farbe für den Text eines Links - Disabled (50% opacity) */
+  --OMF_Link_Text_dis: var(--OMF_Dark-blue_00__50);
+
+  /* Farbe für den Text eines Links - Enabled */
+  --OMF_Link_Text_ena: var(--OMF_Dark-blue_00);
+
+  /* Farbe für den Text eines Links - Pressed */
+  --OMF_Link_Text_prs: var(--OMF_Dark-blue_00);
+
+  /* Stützpunkt 00 Verlaufsfarbe der Menükachel - Enabled */
+  --OMF_Menue-tile_Gradient_00_ena: var(--OMF_Grey_11);
+
+  /* Stützpunkt 01 Verlaufsfarbe der Menükachel - Enabled */
+  --OMF_Menue-tile_Gradient_01_ena: var(--OMF_Grey_09);
+
+  /* Stützpunkt 00 Verlaufsfarbe der Menükachel - Pressed */
+  --OMF_Menue-tile_Gradient_00_prs: var(--OMF_Grey_09);
+
+  /* Stützpunkt 01 Verlaufsfarbe der Menükachel - Pressed */
+  --OMF_Menue-tile_Gradient_01_prs: var(--OMF_Grey_11);
+
+  /* Stützpunkt 00 Verlaufsfarbe des Icons für die Menükachel - Enabled (50% opacity) */
+  --OMF_Menue-tile_Icon_Gradient_00_ena: var(--OMF_Dark-blue_00__50);
+
+  /* Stützpunkt 01 Verlaufsfarbe des Icons für die Menükachel - Enabled (50% opacity) */
+  --OMF_Menue-tile_Icon_Gradient_01_ena: var(--OMF_Blue-grey_05__50);
+
+  /* Stützpunkt 00 Verlaufsfarbe des Icons für die Menükachel - Pressed (50% opacity) */
+  --OMF_Menue-tile_Icon_Gradient_00_prs: var(--OMF_Blue-grey_05__50);
+
+  /* Stützpunkt 01 Verlaufsfarbe des Icons für die Menükachel - Pressed (50% opacity) */
+  --OMF_Menue-tile_Icon_Gradient_01_prs: var(--OMF_Dark-blue_00__50);
+
+  /* Schattenfarbe der Menükachel - Enabled */
+  --OMF_Menue-tile_Shadow_ena: var(--OMF_Blue-grey_03);
+
+  /* Schattenfarbe der Menükachel - Pressed */
+  --OMF_Menue-tile_Shadow_prs: var(--OMF_Blue-grey_03);
+
+  /* Farbe für den Text der Menükachel - Enabled */
+  --OMF_Menue-tile_Text_ena: var(--OMF_Dark-blue_00);
+
+  /* Farbe für den Text der Menükachel - Enabled */
+  --OMF_Menue-tile_Text_prs: var(--OMF_Dark-blue_00);
+
+  /* Hintergrundfarbe des ersten Elements im Pfad - Enabled */
+  --OMF_Navigation-Path_Root_Background_ena: var(--OMF_White_00);
+
+  /* Konturfarbe des ersten Elements im Pfad - Enabled */
+  --OMF_Navigation-Path_Root_Border_ena: var(--OMF_Blue-grey_07);
+
+  /* Stützpunkt 00 Verlaufsfarbe für Zwischenelemente des Navigation Path - Enabled */
+  --OMF_Navigation-Path_Gradient_00_ena: var(--OMF_Blue_11);
+
+  /* Stützpunkt 01 Verlaufsfarbe für Zwischenelemente des Navigation Path - Enabled */
+  --OMF_Navigation-Path_Gradient_01_ena: var(--OMF_Blue_10);
+
+  /* Stützpunkt 00 Verlaufsfarbe für Zwischenelemente des Navigation Path - Pressed */
+  --OMF_Navigation-Path_Gradient_00_prs: var(--OMF_Blue_10);
+
+  /* Stützpunkt 01 Verlaufsfarbe für Zwischenelemente des Navigation Path - Pressed */
+  --OMF_Navigation-Path_Gradient_01_prs: var(--OMF_Blue_11);
+
+  /* Iconfarbe des ersten Elements im Pfad - Enabled */
+  --OMF_Navigation-Path_Root_Icon_ena: var(--OMF_Blue-grey_07);
+
+  /* Stützpunkt 00 Verlaufsfarbe für das letzte Element des Navigation Path - Enabled */
+  --OMF_Navigation-Path_Last-Entry_Gradient_00_ena: var(--OMF_Blue-grey_05);
+
+  /* Stützpunkt 01 Verlaufsfarbe für das letzte Element des Navigation Path - Enabled */
+  --OMF_Navigation-Path_Last-Entry_Gradient_01_ena: var(--OMF_Blue-grey_02);
+
+  /* Stützpunkt 00 Verlaufsfarbe für das letzte Element des Navigation Path - Pressed */
+  --OMF_Navigation-Path_Last-Entry_Gradient_00_prs: var(--OMF_Blue-grey_02);
+
+  /* Stützpunkt 02 Verlaufsfarbe für das letzte Element des Navigation Path - Pressed */
+  --OMF_Navigation-Path_Last-Entry_Gradient_01_prs: var(--OMF_Blue-grey_05);
+
+  /* Schattenfarbe des Zwischenelements des Navigation Path - Enabled */
+  --OMF_Navigation-Path_Shadow_ena: var(--OMF_Blue-grey_07);
+
+  /* Schattenfarbe des Zwischenelements des Navigation Path - Pressed */
+  --OMF_Navigation-Path_Shadow_prs: var(--OMF_Blue-grey_07);
+
+  /* Textfarbe des ersten Elements im Pfad - Enabled */
+  --OMF_Navigation-Path_Root_Text_ena: var(--OMF_Blue-grey_07);
+
+  /* Textfarbe des Zwischenelements im Pfad - Enabled */
+  --OMF_Navigation-Path_Text_ena: var(--OMF_Dark-blue_00);
+
+  /* Textfarbe des Zwischenelements im Pfad - Pressed */
+  --OMF_Navigation-Path_Text_prs: var(--OMF_Dark-blue_00);
+
+  /* Textfarbe des letzten Elements im Pfad - Enabled */
+  --OMF_Navigation-Path_Last-Entry_Text_ena: var(--OMF_White_00);
+
+  /* Textfarbe des letzten Elements im Pfad - Pressed */
+  --OMF_Navigation-Path_Last-Entry_Text_prs: var(--OMF_White_00);
+
+  /* Hintergrundfarbe der Progressbar mit Alarmstatus */
+  --OMF_Progress-Bar_Background_Alarm: var(--OMF_Red_03);
+
+  /* Hintergrundfarbe der Progressbar */
+  --OMF_Progress-Bar_Background_Standard: var(--OMF_Grey_07);
+
+  /* Hintergrundfarbe der Progressbar mit Warnstatus */
+  --OMF_Progress-Bar_Background_Warning: var(--OMF_Yellow_02);
+
+  /* Füllfarbe der Progressbar mit Alarmstatus */
+  --OMF_Progress-Bar_Fill_Alarm: var(--OMF_Red_01);
+
+  /* Füllfarbe der Progressbar */
+  --OMF_Progress-Bar_Fill_Standard: var(--OMF_Blue_03);
+
+  /* Füllfarbe der Progressbar mitWarnstatus */
+  --OMF_Progress-Bar_Fill_Warning: var(--OMF_Yellow_00);
+
+  /* Hintergrundfarbe des Pulldown */
+  --OMF_Pulldown_Background_std: var(--OMF_Blue-grey_02);
+
+  /* Stützpunkt 00 Verlaufsfarbe für Pulldown-Entrys - Active Enabled */
+  --OMF_Pulldown_Entry_Gradient_00_actena: var(--OMF_Blue-grey_04);
+
+  /* Stützpunkt 01 Verlaufsfarbe für Pulldown-Entrys - Active Enabled */
+  --OMF_Pulldown_Entry_Gradient_01_actena: var(--OMF_Blue-grey_02);
+
+  /* Stützpunkt 00 Verlaufsfarbe für Pulldown-Entrys - Active Pressed */
+  --OMF_Pulldown_Entry_Gradient_00_actprs: var(--OMF_Blue-grey_02);
+
+  /* Stützpunkt 01 Verlaufsfarbe für Pulldown-Entrys - Active Pressed */
+  --OMF_Pulldown_Entry_Gradient_01_actprs: var(--OMF_Blue-grey_04);
+
+  /* Stützpunkt 00 Verlaufsfarbe für Pulldown-Entrys - Disabled */
+  --OMF_Pulldown_Entry_Gradient_00_dis: var(--OMF_Grey_10);
+
+  /* Stützpunkt 01 Verlaufsfarbe für Pulldown-Entrys - Disabled */
+  --OMF_Pulldown_Entry_Gradient_01_dis: var(--OMF_Grey_08);
+
+  /* Stützpunkt 00 Verlaufsfarbe für Pulldown-Entrys - Enabled */
+  --OMF_Pulldown_Entry_Gradient_00_ena: var(--OMF_Grey_10);
+
+  /* Stützpunkt 01 Verlaufsfarbe für Pulldown-Entrys - Enabled */
+  --OMF_Pulldown_Entry_Gradient_01_ena: var(--OMF_Grey_08);
+
+  /* Stützpunkt 00 Verlaufsfarbe für Pulldown-Entrys - Pressed */
+  --OMF_Pulldown_Entry_Gradient_00_prs: var(--OMF_Grey_08);
+
+  /* Stützpunkt 01 Verlaufsfarbe für Pulldown-Entrys - Pressed */
+  --OMF_Pulldown_Entry_Gradient_01_prs: var(--OMF_Grey_10);
+
+  /* Textfarbe eines Pulldown Group Eintrags */
+  --OMF_Pulldown_Group_Text_std: var(--OMF_White_00);
+
+  /* Iconfarbe eines Pulldown Eintrags - Active Enabled */
+  --OMF_Pulldown_Icon_actena: var(--OMF_White_00);
+
+  /* Iconfarbe eines Pulldown Eintrags - Active Pressed */
+  --OMF_Pulldown_Icon_actprs: var(--OMF_White_00);
+
+  /* Iconfarbe eines Pulldown Eintrags - Disabled (50% opacity) */
+  --OMF_Pulldown_Icon_dis: var(--OMF_Dark-blue_00__50);
+
+  /* Iconfarbe eines Pulldown Eintrags - Enabled */
+  --OMF_Pulldown_Icon_ena: var(--OMF_Dark-blue_00);
+
+  /* Iconfarbe eines Pulldown Eintrags - Pressed */
+  --OMF_Pulldown_Icon_prs: var(--OMF_Dark-blue_00);
+
+  /* Schattenfarbe eines Pulldown Eintrages - Active Enabled */
+  --OMF_Pulldown_Shadow_actena: var(--OMF_Dark-blue_00);
+
+  /* Schattenfarbe eines Pulldown Eintrages - Active Pressed */
+  --OMF_Pulldown_Shadow_actprs: var(--OMF_Dark-blue_00);
+
+  /* Schattenfarbe eines Pulldown Eintrages - Disabled */
+  --OMF_Pulldown_Shadow_dis: var(--OMF_Blue-grey_02);
+
+  /* Schattenfarbe eines Pulldown Eintrages - Enabled */
+  --OMF_Pulldown_Shadow_ena: var(--OMF_Blue-grey_02);
+
+  /* Schattenfarbe eines Pulldown Eintrages - Pressed */
+  --OMF_Pulldown_Shadow_prs: var(--OMF_Blue-grey_02);
+
+  /* Textfarbe eines Pulldown Eintrages - Active Enabled */
+  --OMF_Pulldown_Text_actena: var(--OMF_White_00);
+
+  /* Textfarbe eines Pulldown Eintrages - Active Pressed */
+  --OMF_Pulldown_Text_actprs: var(--OMF_White_00);
+
+  /* Textfarbe eines Pulldown Eintrages - Disabled (50% opacity) */
+  --OMF_Pulldown_Text_dis: var(--OMF_Dark-blue_00__50);
+
+  /* Textfarbe eines Pulldown Eintrages - Enabled */
+  --OMF_Pulldown_Text_ena: var(--OMF_Dark-blue_00);
+
+  /* Textfarbe eines Pulldown Eintrages - Pressed */
+  --OMF_Pulldown_Text_prs: var(--OMF_Dark-blue_00);
+
+  /* Hintergrundfarbe für den Range Indicator */
+  --OMF_Range-Indicator_Background_std: var(--OMF_Blue-grey_07);
+
+  /* Linienfarbe für den Range Indicator */
+  --OMF_Range-Indicator_Line: var(--OMF_White_00);
+
+  /* Textfarbe für den Range Indicator */
+  --OMF_Range-Indicator_Text: var(--OMF_White_00);
+
+  /* Füllfarbe der Ratiobar */
+  --OMF_Ratio-Bar_00: var(--OMF_Green_01);
+
+  /* Füllfarbe der Ratiobar */
+  --OMF_Ratio-Bar_01: var(--OMF_Green_02);
+
+  /* Füllfarbe der Ratiobar */
+  --OMF_Ratio-Bar_02: var(--OMF_Blue_01);
+
+  /* Füllfarbe der Ratiobar */
+  --OMF_Ratio-Bar_03: var(--OMF_Blue_02);
+
+  /* Füllfarbe der Ratiobar */
+  --OMF_Ratio-Bar_04: var(--OMF_Yellow_01);
+
+  /* Füllfarbe der Ratiobar */
+  --OMF_Ratio-Bar_05: var(--OMF_Yellow_00);
+
+  /* Füllfarbe der Ratiobar */
+  --OMF_Ratio-Bar_06: var(--OMF_Red_01);
+
+  /* Füllfarbe der Ratiobar */
+  --OMF_Ratio-Bar_07: var(--OMF_Red_02);
+
+  /* Hintergrundfarbe der Scrollbar auf dunklen Flächen */
+  --OMF_Scrollbar_Background_dark: transparent;
+
+  /* Hintergrundfarbe der Scrollbar auf hellen Flächen und Drop Down */
+  --OMF_Scrollbar_Background_light: transparent;
+
+  /* Thumbfarbe der Scrollbar auf dunklen Flächen */
+  --OMF_Scrollbar_Thumb_dark: var(--OMF_White_00);
+
+  /* Thumbfarbe der Scrollbar auf hellen Flächen */
+  --OMF_Scrollbar_Thumb_light: var(--OMF_Dark-blue_00);
+
+  /* Separatorfarbe auf dunklen Flächen */
+  --OMF_Separator_dark: var(--OMF_White_00);
+
+  /* Separatorfarbe auf hellen Flächen */
+  --OMF_Separator_light: var(--OMF_Grey_04);
+
+  /* Stützpunkt 00 Verlaufsfarbe für Table Header - Enabled (60% opacity) */
+  --OMF_Table-Header_Gradient_00_ena: var(--OMF_Grey_07__60);
+
+  /* Stützpunkt 01 Verlaufsfarbe für Table Header - Enabled (60% opacity) */
+  --OMF_Table-Header_Gradient_01_ena: var(--OMF_Grey_09__60);
+
+  /* Stützpunkt 00 Verlaufsfarbe für Table Header - Pressed (60% opacity) */
+  --OMF_Table-Header_Gradient_00_prs: var(--OMF_Grey_09__60);
+
+  /* Stützpunkt 01 Verlaufsfarbe für Table Header - Pressed (60% opacity) */
+  --OMF_Table-Header_Gradient_01_prs: var(--OMF_Grey_07__60);
+
+  /* Iconfarbe im Header der Tabelle - Enabled */
+  --OMF_Table-Header_Icon_ena: var(--OMF_Dark-blue_00);
+
+  /* Iconfarbe im Header der Tabelle - Pressed  */
+  --OMF_Table-Header_Icon_prs: var(--OMF_Blue_07);
+
+  /* Schattenfarbe für Spalten Header der Tabelle - Enabled (60% opacity) */
+  --OMF_Table-Header_Shadow_ena: var(--OMF_Dark-blue_00__60);
+
+  /* Schattenfarbe für Spalten Header der Tabelle - Pressed (60% opacity) */
+  --OMF_Table-Header_Shadow_prs: var(--OMF_Dark-blue_00__60);
+
+  /* Hintergrundfarbe für die Hervorhebung der Sortierrichtung */
+  --OMF_Table-Header_Sorting_Background: var(--OMF_Blue_06);
+
+  /* Iconfarbe für die Hervorhebung der Sortierrichtung */
+  --OMF_Table-Header_Sorting_Icon: var(--OMF_White_00);
+
+  /* Textfarbe im Header der Tabelle - Enabled */
+  --OMF_Table-Header_Text_ena: var(--OMF_Dark-blue_00);
+
+  /* Textfarbe im Header der Tabelle - Pressed */
+  --OMF_Table-Header_Text_prs: var(--OMF_Dark-blue_00);
+
+  /* Hintergrundfarbe für geradzahlige Zeilen/Zellen der Tabelle  (70% opacity) */
+  --OMF_Table-Row-Even: var(--OMF_Grey_08__70);
+
+  /* Hintergrundfarbe für ungerade Zeilen/Zellen der Tabelle (70% opacity) */
+  --OMF_Table-Row-Odd: var(--OMF_Grey_10__70);
+
+  /* Selektionsfarbe für Zeilen/Zellen der Tabelle */
+  --OMF_Table-Row_Selected: var(--OMF_Blue_10);
+
+  /* Schriftfarbe in Zeilen/Zellen der Tabelle - Enabled */
+  --OMF_Table-Row_Text_ena: var(--OMF_Dark-blue_00);
+
+  /* Schriftfarbe in Zeilen/Zellen der Tabelle - Selected */
+  --OMF_Table-Row_Text_Selected: var(--OMF_Dark-blue_00);
+
+  /* Borderfarbe für Textfeldanteil von Componenten - Disabled (75% opacity) */
+  --OMF_Textcomponent_Border_dis: var(--OMF_Blue_11__75);
+
+  /* Borderfarbe für Textfeldanteil von Componenten - Enabled */
+  --OMF_Textcomponent_Border_ena: var(--OMF_Blue_10);
+
+  /* Borderfarbe für Textfeldanteil von Componenten - Readonly Enabled */
+  --OMF_Textcomponent_Border_Readonly_ena: var(--OMF_Blue_11);
+
+  /* Hintergrund für Textfeldanteil von Componenten - Disabled */
+  --OMF_Textcomponent_Background_dis: var(--OMF_Blue_12);
+
+  /* Hintergrund für Textfeldanteil von Componenten - Enabled */
+  --OMF_Textcomponent_Background_ena: var(--OMF_White_00);
+
+  /* Hintergrund für Textfeldanteil von Componenten - Readonly Enabled */
+  --OMF_Textcomponent_Background_Readonly_ena: var(--OMF_Blue_11);
+
+  /* Iconfarbe für Textfeldanteil von Componenten - Disabled (50% opacity) */
+  --OMF_Textcomponent_Icon_dis: var(--OMF_Dark-blue_00__50);
+
+  /* Iconfarbe für Textfeldanteil von Componenten - Enabled */
+  --OMF_Textcomponent_Icon_ena: var(--OMF_Dark-blue_00);
+
+  /* Iconfarbe für Textfeldanteil von Componenten - Readonly Enabled */
+  --OMF_Textcomponent_Icon_Readonly_ena: var(--OMF_Dark-blue_00);
+
+  /* Schattenfarbe für Textfeldanteile von Componenten - Disabled (75% opacity) */
+  --OMF_Textcomponent_Shadow_dis: var(--OMF_Blue_11__75);
+
+  /* Schattenfarbe für Textfeldanteile von Componenten - Enabled */
+  --OMF_Textcomponent_Shadow_ena: var(--OMF_Blue-grey_05);
+
+  /* Schattenfarbe für Textfeldanteile von Componenten - Readonly Enabled */
+  --OMF_Textcomponent_Shadow_Readonly_ena: var(--OMF_Blue_11);
+
+  /* Textfarbe für Textfeldanteile von Componenten - Disabled (50% opacity) */
+  --OMF_Textcomponent_Text_dis: var(--OMF_Dark-blue_00__50);
+
+  /* Textfarbe für Textfeldanteile von Componenten - Enabled */
+  --OMF_Textcomponent_Text_ena: var(--OMF_Dark-blue_00);
+
+  /* Textfarbe für Textfeldanteile von Componenten - Readonly Enabled */
+  --OMF_Textcomponent_Text_Readonly_ena: var(--OMF_Dark-blue_00);
+
+  /* Stützpunkt 00 Verlaufsfarbe für den den Title eines Screens - Active Disabled */
+  --OMF_Title_Gradient_00_actdis: var(--OMF_Grey_10);
+
+  /* Stützpunkt 01 Verlaufsfarbe für den den Title eines Screens - Active Disabled */
+  --OMF_Title_Gradient_01_actdis: var(--OMF_Grey_08);
+
+  /* Stützpunkt 00 Verlaufsfarbe für den den Title eines Screens - Active Enabled */
+  --OMF_Title_Gradient_00_actena: var(--OMF_Grey_10);
+
+  /* Stützpunkt 01 Verlaufsfarbe für den den Title eines Screens - Active Enabled */
+  --OMF_Title_Gradient_01_actena: var(--OMF_Grey_08);
+
+  /* Stützpunkt 00 Verlaufsfarbe für den den Title eines Screens - Active Pressed */
+  --OMF_Title_Gradient_00_actprs: var(--OMF_Grey_08);
+
+  /* Stützpunkt 01 Verlaufsfarbe für den den Title eines Screens - Active Pressed */
+  --OMF_Title_Gradient_01_actprs: var(--OMF_Grey_10);
+
+  /* Stützpunkt 00 Verlaufsfarbe für den den Title eines Screens - Disabled */
+  --OMF_Title_Gradient_00_dis: var(--OMF_Grey_10);
+
+  /* Stützpunkt 01 Verlaufsfarbe für den den Title eines Screens - Disabled */
+  --OMF_Title_Gradient_01_dis: var(--OMF_Grey_08);
+
+  /* Stützpunkt 00 Verlaufsfarbe für den den Title eines Screens - Enabled */
+  --OMF_Title_Gradient_00_ena: var(--OMF_Grey_10);
+
+  /* Stützpunkt 01 Verlaufsfarbe für den den Title eines Screens - Enabled */
+  --OMF_Title_Gradient_01_ena: var(--OMF_Grey_08);
+
+  /* Stützpunkt 00 Verlaufsfarbe für den den Title eines Screens - Pressed */
+  --OMF_Title_Gradient_00_prs: var(--OMF_Grey_08);
+
+  /* Stützpunkt 01 Verlaufsfarbe für den den Title eines Screens - Pressed */
+  --OMF_Title_Gradient_01_prs: var(--OMF_Grey_10);
+
+  /* Schattenfarbe für den Title eines Screens - Active Disabled */
+  --OMF_Title_Shadow_actdis: var(--OMF_Blue-grey_02);
+
+  /* Schattenfarbe für den Title eines Screens - Active Enabled */
+  --OMF_Title_Shadow_actena: var(--OMF_Blue-grey_02);
+
+  /* Schattenfarbe für den Title eines Screens - Active Pressed */
+  --OMF_Title_Shadow_actprs: var(--OMF_Blue-grey_02);
+
+  /* Schattenfarbe für den Title eines Screens - Disabled */
+  --OMF_Title_Shadow_dis: var(--OMF_Blue-grey_02);
+
+  /* Schattenfarbe für den Title eines Screens - Enabled */
+  --OMF_Title_Shadow_ena: var(--OMF_Blue-grey_02);
+
+  /* Schattenfarbe für den Title eines Screens - Pressed */
+  --OMF_Title_Shadow_prs: var(--OMF_Blue-grey_02);
+
+  /* Textfarbe für den Title eines Screens - Enabled */
+  --OMF_Title_Text_ena: var(--OMF_Dark-blue_00);
+
+  /* Textfarbe für den Title eines Screens - Disabled (50% opacity) */
+  --OMF_Title_Text_dis: var(--OMF_Dark-blue_00__50);
+
+  /* Stützpunkt 00 Verlaufsfarbe für den Frame-Header und Frame Footer */
+  --OMF_UI-Frame_Background_Gradient_00_std: var(--OMF_Dark-blue_00);
+
+  /* Stützpunkt 01 Verlaufsfarbe für den Frame-Header und Frame Footer */
+  --OMF_UI-Frame_Background_Gradient_01_std: var(--OMF_Blue-grey_02);
+
+  /* Schattenfarbe für den Frame-Header (35% opacity) */
+  --OMF_UI-Frame_Background_Shadow_std: var(--OMF_Grey_03__35);
+
+  /* Schaltfläche im Frame - Active */
+  --OMF_UI-Frame_Button_actena: var(--OMF_Dark-blue_00);
+
+  /* Schaltfläche im Frame - Disabled */
+  --OMF_UI-Frame_Button_dis: transparent;
+
+  /* Schaltfläche im Frame - Enabled */
+  --OMF_UI-Frame_Button_ena: transparent;
+
+  /* Schaltfläche im Frame - Pressed */
+  --OMF_UI-Frame_Button_prs: var(--OMF_Dark-blue_00);
+
+  /* Icon im Frame - Active */
+  --OMF_UI-Frame_Icon_actena: var(--OMF_White_00);
+
+  /* Icon im Frame - Disabled */
+  --OMF_UI-Frame_Icon_dis: var(--OMF_Blue-grey_03);
+
+  /* Icon im Frame - Enabled */
+  --OMF_UI-Frame_Icon_ena: var(--OMF_Grey_07);
+
+  /* Icon im Frame - Pressed */
+  --OMF_UI-Frame_Icon_prs: var(--OMF_Blue-grey_05);
+
+  /* Menu-Bar im Frame - Active */
+  --OMF_UI-Frame_Menu-Bar_actena: var(--OMF_Blue-grey_06);
+
+  /* Menu-Bar im Frame - Enabled */
+  --OMF_UI-Frame_Menu-Bar_ena: transparent;
+
+  /* Menu-Bar im Frame - Pressed */
+  --OMF_UI-Frame_Menu-Bar_prs: var(--OMF_Dark-blue_00);
+
+  /* Text im Frame - Active */
+  --OMF_UI-Frame_Text_actena: var(--OMF_White_00);
+
+  /* Text im Frame - Enabled */
+  --OMF_UI-Frame_Text_ena: var(--OMF_Grey_07);
+
+  /* Text im Frame - Pressed */
+  --OMF_UI-Frame_Text_prs: var(--OMF_Blue-grey_05);
+
+  /* Hintergrundfläche des Softwareprodukts im oberen Frame - Active */
+  --OMF_UI-Frame_Softwareproduct_Background_actena: var(--OMF_Dark-blue_00);
+
+  /* Hintergrundfläche des Softwareprodukts im oberen Frame - Enabled */
+  --OMF_UI-Frame_Softwareproduct_Background_ena: transparent;
+
+  /* Hintergrundfläche des Softwareprodukts im oberen Frame - Pressed */
+  --OMF_UI-Frame_Softwareproduct_Background_prs: var(--OMF_Dark-blue_00);
+
+  /* Text des Softwareprodukts im oberen Frame - Active */
+  --OMF_UI-Frame_Softwareproduct_Text_actena: var(--OMF_White_00);
+
+  /* Text des Softwareprodukts im oberen Frame - Enabled */
+  --OMF_UI-Frame_Softwareproduct_Text_ena: var(--OMF_White_00);
+
+  /* Text des Softwareprodukts im oberen Frame - Pressed */
+  --OMF_UI-Frame_Softwareproduct_Text_prs: var(--OMF_Blue-grey_05);
+
+  /* Stützpunkt 00 Verlaufsfarbe für das Wheel Control - Enabled */
+  --OMF_Wheel-Control_Gradient_00_ena: var(--OMF_Blue_10);
+
+  /* Stützpunkt 01 Verlaufsfarbe für das Wheel Control - Enabled */
+  --OMF_Wheel-Control_Gradient_01_ena: var(--OMF_Blue_09);
+
+  /* Stützpunkt 00 Verlaufsfarbe für das Wheel Control - Pressed */
+  --OMF_Wheel-Control_Gradient_00_prs: var(--OMF_Blue_09);
+
+  /* Stützpunkt 01 Verlaufsfarbe für das Wheel Control - Pressed */
+  --OMF_Wheel-Control_Gradient_01_prs: var(--OMF_Blue_10);
+
+  /* Hintergrundfarbe für das Wheel Control - Disabled (40% opacity) */
+  --OMF_Wheel-Control_Background_dis: var(--OMF_Blue_09__40);
+
+  /* Text- und Skalafarbe für das Wheel Control - Enabled */
+  --OMF_Wheel-Control_Text_ena: var(--OMF_Dark-blue_00);
+
+  /* Text- und Skalafarbe für das Wheel Control - Disabled (50% opacity) */
+  --OMF_Wheel-Control_Text_dis: var(--OMF_Dark-blue_00__50);
+
+  /* Farbe der Wertegrenze für das Wheel Control */
+  --OMF_Wheel-Control-Limit: var(--OMF_Blue-grey_00);
+
+  /* Füllfarbe des Zeigers und des Balkens für das Wheel Control (eingestellter Wert ist nicht valide) */
+  --OMF_Wheel-Control_Icon_Not-Valide: var(--OMF_Red_02);
+
+  /* Hintergrundfarbe für das Widget */
+  --OMF_Widget_Background_std: var(--OMF_Blue_12);
+
+  /* } WARNING generated */
+
+  /**
+    Taken from Legende_FDY_plus Maschinen_Overview.docx
+    */
+  --OMF_Generic-Block_Navigation_Gradient_01_ena: var(--OMF_Grey_11);
+  --OMF_Generic-Block_Navigation_Gradient_02_ena: var(--OMF_Grey_09);
+
+  --OMF_Generic-Block_Navigation_act: var(--OMF_Blue_10);
+
+  --OMF_Generic-Block_Navigation_Shadow: var(--OMF_Dark-blue_00);
+
+  --OMF_Generic-Block_Text_ena: var(--OMF_Dark-blue_00);
+  --OMF_Generic-Block_Text_act: var(--OMF_Dark-blue_00);
+  --OMF_Generic-Block_Text_dis: var(--OMF_Grey_07);
+
+  --OMF_Component_Icon_ena: var(--OMF_Dark-blue_00);
+  --OMF_Component_Icon_act: var(--OMF_Dark-blue_00);
+  --OMF_Component_Icon_dis: var(--OMF_Grey_07);
+
+  /* TODO: Farbe der Contenfläche */
+  --OMF_Content-Background_std: var(--OMF_Blue_12);
+
+  /* MANUAL: Farbe der Contenfläche (0% opactiy) */
+  --OMF_Content-Background_std__00: var(--OMF_Blue_12__00);
+}

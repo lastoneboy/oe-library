@@ -1,0 +1,62 @@
+---
+menu: Controls
+name: Command Button
+---
+
+import { Playground, PropsTable } from 'docz'
+
+# Command Button
+
+## Installation
+
+```jsx
+import { CommandButton, SignalingLevel } from 'oe-library';
+```
+
+## When to Use
+
+A Command Button is used to trigger an action. A Command Button can be combined
+with other elements, e.g. an alarm state and/or with the Focus Border. The alarm
+border and Focus Border are used in addition to the existing state of the button
+(alarm border inside dimensions, focus border outside dimensions).
+
+## Examples
+
+import { CommandButton, _CommandButton } from './CommandButton'
+import { SignalingLevel } from './types'
+
+<Playground>
+  <CommandButton onClick={() => alert('clicked')}>Command</CommandButton>
+</Playground>
+
+### With alarm
+
+<Playground>
+  <CommandButton level={SignalingLevel.Alarm}>Command with Alarm</CommandButton>
+</Playground>
+
+### With warning
+
+<Playground>
+  <CommandButton level={SignalingLevel.Warning}>Command with Warning</CommandButton>
+</Playground>
+
+### With icon
+
+<Playground>
+  <CommandButton icon={(<svg viewBox="0 0 8 8"><path d="M0,0 L8,0 L8,8 L0,8 Z" /></svg>)}>Command</CommandButton>
+</Playground>
+
+### With icon only
+
+<Playground>
+  <CommandButton icon={(<svg viewBox="0 0 8 8"><path d="M0,0 L8,0 L8,8 L0,8 Z" /></svg>)}></CommandButton>
+</Playground>
+
+## Props
+
+<PropsTable of={_CommandButton} />
+
+## Further Reading
+
+* [Styleguide](http://poc-life-demo.oerlikontextile.com/styleguide/index.html#/UI%20Components/Command%20Button)

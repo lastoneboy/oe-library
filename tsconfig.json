@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "downlevelIteration": true,
+    "lib": ["dom", "es2017"],
+    "jsx": "react",
+    "sourceMap": true,
+    "strict": true,
+    "outDir": "build",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "rootDir": "src",
+    "declaration": true,
+    "target": "es5"
+  },
+  "include": ["src/**/*", "types/**/*"],
+  "exclude": ["node_modules/**"],
+}

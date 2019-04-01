@@ -1,0 +1,80 @@
+---
+menu: Controls
+name: Pulldown
+---
+
+import { Playground, PropsTable } from 'docz'
+
+# Pulldown
+
+## Installation
+
+```jsx
+import { PulldownMenuButton, PulldownGroup, PulldownItem } from 'oe-library';  
+```
+
+## When to Use
+
+A Pulldown is used to list a number of choices. It is composed of the background
+and several Entries. Entries might be grouped by a Groupname. Selecting an Entry
+initiates the command to make the selection.
+
+The Entries can be used with or without grouping in the Pulldown.
+
+## Examples
+
+import { default as PulldownMenuButton, _PulldownMenuButton } from './PulldownMenuButton';
+import { default as PulldownGroup } from './PulldownGroup';
+import { default as PulldownItem } from './PulldownItem';
+
+<Playground>
+    <PulldownMenuButton icon={(<svg viewBox="0 0 18 18"><path d="M4,5 L14,5 L14,7 L4,7 Z M4,8 L14,8 L14,10 L4,10 Z M4,11 L14,11 L14,13 L4,13 Z" /></svg>)}>
+        <PulldownItem
+            caption="Item 1"
+            isActive={true}
+            onClick={(group, item) => alert(item.props.caption)}
+        />
+        <PulldownItem
+            caption="Item 2"
+            onClick={(group, item) => alert(item.props.caption)}
+        />
+        <PulldownItem
+            caption="Item 3"
+            onClick={(group, item) => alert(item.props.caption)}
+        />
+    </PulldownMenuButton>
+</Playground>
+
+## With groups
+
+<Playground>
+    <PulldownMenuButton icon={(<svg viewBox="0 0 18 18"><path d="M4,5 L14,5 L14,7 L4,7 Z M4,8 L14,8 L14,10 L4,10 Z M4,11 L14,11 L14,13 L4,13 Z" /></svg>)}>
+        <PulldownGroup caption="Group 1">
+            <PulldownItem
+                caption="Item 1.1"
+                isActive={true}
+            />
+            <PulldownItem caption="Item 1.2"/>
+        </PulldownGroup>
+        <PulldownGroup caption="Group 2">
+            <PulldownItem caption="Item 2.1"/>
+            <PulldownItem caption="Item 2.2"/>
+        </PulldownGroup>
+    </PulldownMenuButton>
+</Playground>
+
+## Props PulldownMenuButton
+
+<PropsTable of={_PulldownMenuButton} />
+
+## Props PulldownGroup
+
+<PropsTable of={PulldownGroup} />
+
+## Props PulldownItem
+
+<PropsTable of={PulldownItem} />
+
+## Further Reading
+
+* [Styleguide](http://poc-life-demo.oerlikontextile.com/styleguide/index.html#/UI%20Components/Pulldown)

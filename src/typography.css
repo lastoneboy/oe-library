@@ -1,0 +1,47 @@
+.Font_01 {
+  font-size: 15pt;
+  font-weight: normal;
+  font-family: Arial;
+}
+
+.Font_02 {
+  font-size: 12pt;
+  font-family: Arial;
+  font-weight: normal;
+}
+
+.Font_03 {
+  font-size: 10pt;
+  font-family: Arial;
+  font-weight: normal;
+}
+
+.Font_04 {
+  font-size: 8pt;
+  font-family: Arial;
+  font-weight: normal;
+}
+
+.Font_05 {
+  font-size: 14pt;
+  font-family: 'Arial Rounded MT', Arial;
+  font-weight: bold;
+}
+
+.Font_06 {
+  font-size: 14pt;
+  font-family: Arial;
+  font-weight: normal;
+}
+
+.Font_07 {
+  font-size: 18pt;
+  font-family: Arial;
+  font-weight: normal;
+}
+
+.Font_08 {
+  font-size: 15pt;
+  font-family: 'Arial Rounded MT', Arial;
+  font-weight: bold;
+}

@@ -1,0 +1,46 @@
+---
+menu: Controls
+name: Switch
+---
+
+import { Playground, PropsTable } from 'docz'
+
+# Switch
+
+## Installation
+
+```jsx
+import { Switch } from 'oe-library';
+```
+
+## When to Use
+
+A Switch is a UI Component for displaying an on/off state.
+
+A Switch is always displayed with a label or icon. The Label takes over the
+function of the exact description for the Switch and can therefore become very
+long. To ensure good legibility, grouped Switches should stand vertically one
+below the other.
+
+## Examples
+
+import { Switch } from './Switch'
+
+<Playground>
+    <label>
+        <span> First </span>
+        <Switch value={true} onChange={value => alert(value)} />
+    </label>
+    <label>
+        <span> Second </span>
+        <Switch disabled={true} value={false} onChange={value => alert(value)} />
+    </label>
+</Playground>
+
+## Props
+
+<PropsTable of={Switch} />
+
+## Further Reading
+
+* [Styleguide](http://poc-life-demo.oerlikontextile.com/styleguide/index.html#/UI%20Components/Switch)

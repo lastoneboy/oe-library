@@ -1,0 +1,66 @@
+{
+  "name": "oe-library",
+  "version": "1.0.0",
+  "description": "Oerlikon Component Library",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "docz:dev": "docz dev",
+    "docz:build": "docz build",
+    "clean": "rm -rf ./build",
+    "build": "tsc && cp package.json build/",
+    "test": "jest"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "emotion": "^9.2.6",
+    "ramda": "^0.25.0",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-draggable": "^3.0.5",
+    "react-emotion": "^9.2.10",
+    "react-virtualized": "^9.20.1"
+  },
+  "devDependencies": {
+    "@types/classnames": "^2.2.6",
+    "@types/jest": "^23.3.1",
+    "@types/ramda": "^0.25.36",
+    "@types/react": "^16.4.11",
+    "@types/react-dom": "^16.0.7",
+    "@types/react-test-renderer": "^16.0.2",
+    "@types/react-virtualized": "^9.18.7",
+    "css-loader": "^1.0.0",
+    "docz": "^0.10.3",
+    "docz-plugin-css": "^0.10.3",
+    "jest": "^23.5.0",
+    "prettier": "^1.14.2",
+    "react-test-renderer": "^16.4.2",
+    "rollup": "^0.64.1",
+    "style-loader": "^0.22.1",
+    "ts-jest": "^23.1.4",
+    "type-zoo": "^3.1.1",
+    "typescript": "^3.0.1"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json"
+    ],
+    "moduleNameMapper": {
+      "^.+\\.css$": "<rootDir>/testutils/styleMock.js",
+      "^.+\\.svg$": "<rootDir>/testutils/svgImportMock.js",
+      "^.+\\.(png|gif|ttf|eot)$": "<rootDir>/testutils/fileMock.js"
+    },
+    "testMatch": [
+      "**/__tests__/**/*.ts?(x)",
+      "**/?(*.)(spec|test).ts?(x)"
+    ],
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest",
+      "^.+\\.jsx?$": "babel-jest"
+    }
+  }
+}

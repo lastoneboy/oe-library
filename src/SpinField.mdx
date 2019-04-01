@@ -1,0 +1,48 @@
+---
+menu: Controls
+name: Spin Field
+---
+
+import { Playground, PropsTable } from 'docz'
+
+# Spin Field
+
+## Installation
+
+```jsx
+import { SpinField } from 'oe-library';  
+```
+
+## When to Use
+
+The Spinfield is a UI Component that can be used to decrease or increase a
+numerical value. Values can be changed stepwise or as autorepeat. If the change
+takes place stepwise, the value of the Spinfield is written directly. Exception:
+The Spinfield is used in a Dialog. Present Value
+
+The Spinfield might display a Present Value. It shows the original value
+compared to the value the user changed. This Present Value is always displayed
+as soon as the user edits the Spinfield, even if the values are the same.
+
+## Examples
+
+import { default as SpinField } from './SpinField';
+import { _SpinField } from './SpinField';
+
+<Playground>
+  <SpinField
+    enabled
+    value={0}
+    onChange={(value) => console.log(value)}
+    minValue={0}
+    maxValue={1000}
+  />
+</Playground>
+
+## Props
+
+<PropsTable of={_SpinField} />
+
+## Further Reading
+
+* [Styleguide](http://poc-life-demo.oerlikontextile.com/styleguide/index.html#/UI%20Components/Spinfield)

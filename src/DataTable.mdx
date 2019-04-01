@@ -1,0 +1,90 @@
+---
+menu: Controls
+name: Table
+---
+
+import { Playground, PropsTable } from 'docz'
+import { Note } from './Note'
+
+# Table
+
+## Installation
+
+```jsx
+import { Table } from 'oe-library';
+```
+
+## When to Use
+
+A Table is a UI component that arranges data or objects in a clearly structured
+representation of horizontal rows and vertical columns.
+
+<Note>
+  The <code>Table</code> component provides functionality for resizing columns.
+  However, <strong>it does not resize the columns itself.</strong> New column
+  widths are passed to the <code>onResizeColumn</code> callback and need to
+  be applied to the <code>columns</code> configuration by the component user.
+</Note>
+
+## Examples
+
+import { Table } from '.'
+
+
+<Playground>
+  <div style={{width: '453px', height: '165px'}}>
+    <Table
+      onResizeColumn={(dataKey, nextWidth) => { console.log('resized', dataKey, 'to', nextWidth) }}
+      columns={[
+        {
+          dataKey: 'column1',
+          label: 'Column 1',
+          width: 150,
+        },
+        {
+            dataKey: 'column2',
+            label: 'Column 2',
+            width: 150,
+        },
+        {
+            dataKey: 'column3',
+            label: 'Column 3',
+            width: 150,
+        }
+      ]}
+      rows={[
+        {
+          column1: 'item 1-1',
+          column2: 'item 1-2',
+          column3: 'item 1-3',
+        },
+        {
+          column1: 'item 2-1',
+          column2: 'item 2-2',
+          column3: 'item 2-3',
+        },
+        {
+          column1: 'item 3-1',
+          column2: 'item 3-2',
+          column3: 'item 3-3',
+        },
+      ]}
+    />
+  </div>
+</Playground>
+
+## Props
+
+### Table
+
+<PropsTable of={Table} />
+
+### Column
+
+import { _Column } from './DataTable'
+
+<PropsTable of={_Column} />
+
+## Further Reading
+
+* [Styleguide](http://poc-life-demo.oerlikontextile.com/styleguide/index.html#/UI%20Components/Table)

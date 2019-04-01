@@ -1,0 +1,68 @@
+---
+menu: Controls
+name: Radio Button
+---
+
+import { Playground, PropsTable } from 'docz'
+
+# Radio Button
+
+## Installation
+
+```jsx
+import { RadioButton } from 'oe-library';
+```
+
+## When to Use
+
+The Radio Button is a UI Component used to make an exclusive selection of
+multiple options. When the new selection is accepted, the previous selection is
+removed.
+
+A Radio Button cannot stand alone and must be combined with other UI Components,
+such as a Label or an icon.
+
+In a group of Radio Buttons at least two options must be offered. The first
+Radio Button should have the default selection if possible.
+
+The Label or the icon take over the function of the exact description for the
+Radio Button. The Label can therefore be very long. To ensure good legibility,
+grouped Radio Buttons should be placed vertically one below the other.
+
+## Examples
+
+import { RadioButton, _RadioButton } from './RadioButton'
+
+<Playground>
+  <div style={{ marginBottom: '1em' }}>
+    <label>
+      <RadioButton
+        value={true}
+        onChange={(value) => alert(value)}
+        name="radio1"
+        enabled={true}
+      />
+      <span> First</span>
+    </label>
+  </div>
+
+  <div>
+    <label>
+      <RadioButton
+        value={false}
+        onChange={(value) => alert(value)}
+        name="radio2"
+        enabled={true}
+      />
+      <span> Second</span>
+    </label>
+  </div>
+</Playground>
+
+## Props
+
+<PropsTable of={_RadioButton} />
+
+## Further Reading
+
+* [Styleguide](http://poc-life-demo.oerlikontextile.com/styleguide/index.html#/UI%20Components/Radio%20Button)

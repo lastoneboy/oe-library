@@ -1,0 +1,36 @@
+---
+menu: Controls
+name: Combo Box
+---
+
+import { Playground, PropsTable } from 'docz'
+
+# Combo Box
+
+## Installation
+
+```jsx
+import { ComboBox } from 'oe-library';
+```
+
+## When to Use
+
+The Combo Box is a UI Component that offers the user a list of entries or options.
+
+The list of entries or options is visualized by a Dropdown.
+
+## Examples
+
+import { ComboBox, _ComboBox } from './ComboBox'
+
+<Playground>
+  <ComboBox items={['First','Second','Third']} value={'Second'} onChange={value => alert(value)}/>
+</Playground>
+
+## Props
+
+<PropsTable of={_ComboBox} />
+
+## Further Reading
+
+* [Styleguide](http://poc-life-demo.oerlikontextile.com/styleguide/index.html#/UI%20Components/Combo%20Box)

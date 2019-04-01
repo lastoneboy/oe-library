@@ -1,0 +1,46 @@
+---
+menu: Controls
+name: Navigation Path
+---
+
+import { Playground, PropsTable } from 'docz'
+
+# Navigation Path
+
+## Installation
+
+```jsx
+import { NavigationPath } from 'oe-library';  
+```
+
+## When to Use
+
+The Navigation Path is used to demonstrate the depth of the hierarchy and/or to
+ensure a more precise naming of the displayed information.
+
+The Navigation Path is always available in an application with hierarchy levels.
+The root element of the Navigation Path uses an icon to indicate whether the
+user is in the menu area or in the topological area (house or tile icon). For
+the use of a single machine, the root element is named with the machine name.
+For larger applications with upstream levels (e.g. hall or factory), the name of
+the relevant element is used (e.g. 'Hall 1' or 'Shanghai').
+
+## Examples
+
+import { default as NavigationPath } from './NavigationPath'
+
+<Playground>
+  <NavigationPath
+        path={['Root', 'Level 1', 'Level 2', 'Level 3']}
+        onClick={(index, source) => alert(index)}
+        icon={(<svg viewBox="0 0 36 28"><path d="M10,23 L10,11 L18,5 L26,11 L26,23 Z" /></svg>)}
+    />
+</Playground>
+
+## Props
+
+<PropsTable of={NavigationPath} />
+
+## Further Reading
+
+* [Styleguide](http://poc-life-demo.oerlikontextile.com/styleguide/index.html#/UI%20Components/Navigation%20Path)
